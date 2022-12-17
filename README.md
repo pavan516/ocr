@@ -1,2 +1,47 @@
 # ocr
 Optical Character Recognition (OCR) using PYTHON. Focused on Sanskrit
+
+### SERVER INSTALLATION STEPS FOR OCR (PYTHON)
+- create AWS instance
+- connect to instance via AWS
+- INSTALL git, use below commands (after running below commands, verify: git --version)
+  - sudo apt update
+  - sudo apt install git
+- INSTALL PYTHON, use below commands
+  - REFERENCE DOC: https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-20-04
+  - sudo apt update
+  - sudo apt install python3-pip python3-dev nginx curl
+- CLONE THE PROJECT FROM GIT
+  - set permissions
+    - cd ~/.ssh
+    - ssh-keygen -o -t rsa -C "pavane@mrsoftsolutions.com"
+    - cat id_rsa.pub
+    - cd ..
+  - git clone git@github.com:mrsoftsolutions/OCR-Backend.git ocr
+- INSTALL application related libraries (verify version: python3 --version)
+  - pip install django
+  - pip install djangorestframework
+  - pip install django-cors-headers
+  - pip install pymysql
+  - pip install djongo
+  - pip install dnspython
+  - pip install pymongo==3.12.3
+  - pip install textblob
+  - pip install pytesseract
+  - pip install opencv-python
+  - sudo apt-get update && sudo apt-get install -y python3-opencv
+  - sudo apt-get install tesseract-ocr
+  - sudo apt-get install tesseract-ocr-san
+- INSTALL MYSQL, use below commands
+  - REFERENCE DOC: https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-22-04
+  - not yet installed --- @todo ---
+- INSTALL MONGO, use below commands
+  - REFERENCE DOC:
+  - not yet installed --- @todo ---
+- PERMANENT RUNSERVER PROCESS
+  - REFERENCE DOC: https://stackoverflow.com/questions/1188542/django-runserver-permanent
+  - sudo apt-get install screen
+  - screen
+  - python manage.py runserver 0.0.0.0:8000
+  - screen -r
+  - screen -d -m python manage.py runserver 0.0.0.0:8000

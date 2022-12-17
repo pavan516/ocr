@@ -1,0 +1,5 @@
+/ocr/settings.py
+/storage/users/*
+/storage/processed_images/*
+/storage/images/*
+/app/config/config.json
